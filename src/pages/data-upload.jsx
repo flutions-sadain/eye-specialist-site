@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { redirect, useRouter } from 'next/navigation'
 
 const DataUpload = () => {
     const router = useRouter();
@@ -47,13 +47,10 @@ const DataUpload = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        // redirect('/questions')
         router.push('/questions');
+        // window.location.href = '/questions';
     };
-
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     window.location.href = '/questions';
-    // };
 
     return (
         <section className="">

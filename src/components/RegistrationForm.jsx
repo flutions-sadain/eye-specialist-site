@@ -1,16 +1,13 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 const RegistrationForm = () => {
   const router = useRouter();
 
   const handleSubmit = () => {
     router.push('/data-upload');
+    //   window.location.href = '/data-upload';
   };
-
-  // const handleSubmit = (e) => {
-  //   window.location.href = '/data-upload';
-  // };
 
   return (
     <section className="">

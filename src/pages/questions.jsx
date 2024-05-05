@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 const questions = () => {
     const router = useRouter();
@@ -33,15 +33,11 @@ const questions = () => {
     ];
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-
         router.push('/recommendation');
+        e.preventDefault();
+        console.log("test")
+        // window.location.href = '/recommendation';
     };
-
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     window.location.href = '/recommendation';
-    // };
 
     return (
         <section className="">
@@ -61,7 +57,7 @@ const questions = () => {
                                 </div>
                             ))}
                             <div className="text-center mt-6">
-                                <button className="bg-[#1e293b] text-white active:bg-[#475569] text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150" type="button" href="/recommendation"> Submit </button>
+                                <button className="bg-[#1e293b] text-white active:bg-[#475569] text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150" type="submit" href="/recommendation"> Submit </button>
                             </div>
                         </form>
                     </div>
