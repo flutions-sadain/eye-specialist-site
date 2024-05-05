@@ -4,7 +4,9 @@ import { useRouter } from 'next/navigation';
 const RegistrationForm = () => {
   const router = useRouter();
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
     router.push('/data-upload');
     //   window.location.href = '/data-upload';
   };
@@ -38,7 +40,7 @@ const RegistrationForm = () => {
                 <input type="password" className="border-0 px-3 py-3 placeholder-[#94a3b8] text-[#475569] bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" placeholder="Confirm Password" />
               </div>
               <div className="text-center mt-6">
-                <button className="bg-[#1e293b] text-white active:bg-[#475569] text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150" type="button"> Sign up </button>
+                <button className="bg-[#1e293b] text-white active:bg-[#475569] text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150" type="submit"> Sign up </button>
               </div>
             </form>
             <div className="rounded-t mb-0 py-6">
